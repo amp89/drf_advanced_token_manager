@@ -20,6 +20,7 @@ pip install --upgrade drf-advanced-token-manager
 4. [OPTIONAL] If you don't want the user to be able to change their own token, add `PREVENT_TOKEN_UI_CHANGE=True`
 5. Add `path('token_manager/', include('drf_advanced_token_manager.urls')),` to your base `urls.py` `urlpatterns`
 
+# Usage:
 
 The added urls are now:
 View token: `token_manager/` (`name='drf_advanced_token_manager.view'`) (This is the UI where the user can manage their token.)
