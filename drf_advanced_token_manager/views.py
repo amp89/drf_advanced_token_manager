@@ -42,9 +42,9 @@ class ChangeTokenView(LoginRequiredMixin, View):
             return HttpResponseForbidden()
 
     def post(self, request, *args, **kwargs):
-        token = Token.objects.get(user=user)
-        token.key = str(uuid.uuid4())
-        token.save()
+        token = Token.objects.get(user=request.user)
+        token.delete()
+        token = Token.objects.create(user=request.user, key=str(uuid.uuid4()))
         return redirect(reverse('drf_advanced_token_manager.view'))
         
 
