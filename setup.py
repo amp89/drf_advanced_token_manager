@@ -7,9 +7,9 @@ from setuptools import (
 
 setup(
     name='drf_advanced_token_manager',
-    version='0.0.0',
+    version='0.0.1',
     url='https://github.com/amp89/drf_advanced_token_manager',
-    download_url="https://github.com/amp89/drf_advanced_token_manager/blob/master/dist/drf_advanced_token_manager-0.0.0.tar.gz",
+    download_url="https://github.com/amp89/drf_advanced_token_manager/blob/master/dist/drf_advanced_token_manager-0.0.1.tar.gz",
     license='MIT',
     description='App level authentication management for django, with access requests and approvals',
     long_description=open('README.rst', 'r', encoding='utf-8').read(),
@@ -19,7 +19,6 @@ setup(
         'django',
         'djangorestframework',
         'django-drf-advanced-token',
-        'django-app-permissions',
     ],
     python_requires='>=3.6',
     

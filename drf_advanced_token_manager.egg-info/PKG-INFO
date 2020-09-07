@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: drf-advanced-token-manager
+Version: 0.0.1
+Summary: App level authentication management for django, with access requests and approvals
+Home-page: https://github.com/amp89/drf_advanced_token_manager
+Author: Alex Peterson
+Author-email: contact@alexpeterson.tech
+License: MIT
+Download-URL: https://github.com/amp89/drf_advanced_token_manager/blob/master/dist/drf_advanced_token_manager-0.0.1.tar.gz
+Description: https://github.com/amp89/drf_advanced_token_manager
+Platform: UNKNOWN
+Requires-Python: >=3.6

@@ -1,0 +1,30 @@
+{% extends 'drf_token_management_base.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block header %}
+Approval
+{% endblock %}
+
+{% block content %}
+
+    <div class="text-center">
+
+        <span style="font-size:1.3em">Are you sure you want to change your token? This will make your own token invalid immediately.</span><br>
+        <span style="font-size:1.3em">This <strong>CANNOT</strong> be undone.</span><br>
+        
+        <form method="POST" action="{% url 'drf_advanced_token_manager.change' %}">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-danger" value="Change Token">
+            <a href="{% url 'drf_advanced_token_manager.view' %}" class="btn btn-primary">Back to View Token</a>
+        </form>
+
+
+
+
+    </div>
+
+{% endblock %}
+
+

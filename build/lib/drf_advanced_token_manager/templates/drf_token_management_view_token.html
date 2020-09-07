@@ -1,0 +1,56 @@
+{% extends 'drf_token_management_base.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block header %}
+Token Information
+{% endblock %}
+
+{% block content %}
+
+    <div class="text-center">
+
+        <h3>Your Token:</h3>
+
+        <h5>
+            Token: <code class="click-to-copy">{{token.key}}</code>
+        </h5>
+        <h5>
+            Auth Header: <code class="click-to-copy">{"Authorization": "Token {{token.key}}"}</code>
+        </h5>
+        <h5>
+            Python Requests Example:<br><code class="click-to-copy">requests.get("http://localhost:8000/auth/token/", headers={"Authorization": "Token {{token.key}}"})</code>
+        </h5>
+        <div><small>Click info to Copy</small></div>
+    </div>
+
+<script>
+    let elementArray = document.getElementsByClassName("click-to-copy");
+
+    let clickCopy = function(){
+
+        let copyText = this.innerText
+        const el = document.createElement('textarea');
+        el.value = copyText;
+        el.setAttribute('readonly', '');
+        el.style.position = 'absolute';
+        el.style.left = '-9999px';
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        this.style.color = "purple";
+
+    }
+
+    for(var i =0; i< elementArray.length; i++){
+        elementArray[i].addEventListener("click",clickCopy, false);
+    }
+    
+</script>]
+
+{% endblock %}
+
+
+
