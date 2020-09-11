@@ -25,7 +25,9 @@ Token Information
         <div><small>Click info to Copy</small></div>
 
         <div>
-            <a class="btn btn-primary" href="{% url 'drf_advanced_token_manager.change' %}">Change Token</a>
+            {% if not change_lock %}
+                <a class="btn btn-primary" href="{% url 'drf_advanced_token_manager.change' %}">Change Token</a>
+            {% endif %}
         </div>
     </div>
 

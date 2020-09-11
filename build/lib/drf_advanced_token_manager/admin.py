@@ -1,3 +1,4 @@
 from django.contrib import admin
+from drf_advanced_token_manager.models import UserUIKeyLock
 
-# Register your models here.
+admin.site.register(UserUIKeyLock)

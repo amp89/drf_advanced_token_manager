@@ -25,3 +25,6 @@ pip install --upgrade drf-advanced-token-manager
 The added urls are now:
 View token: `token_manager/` (`name='drf_advanced_token_manager.view'`) (This is the UI where the user can manage their token.)
 Change token: `token_manager/change/` (`name='drf_advanced_token_manager.change'`) (Note: There is a link to this in the view url above!)
+
+# More:
+- Create an `UserUIKeyLock` object in the admin panel to lock a user's API key from being changed from the UI (Can still be changed from the API)
